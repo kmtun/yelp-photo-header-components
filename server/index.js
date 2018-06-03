@@ -14,7 +14,7 @@ app.use(parser.urlencoded({extended: true}));
 require('../db');
 
 // Static
-app.use(express.static(path.join(__dirname, '../client')));
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 // Routers
 app.use('/api', router);

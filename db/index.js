@@ -5,14 +5,15 @@ const db = new sequelize('yelp', 'Kevin', '', {
 })
 
 db.authenticate()
-  .then(() => {
-    console.log('Database has been established successfully');
-  })
-  .catch(err => {
-    console.log('Unable to connect to database: ', err);
-  })
+.then(() => {
+  console.log('Database has been established successfully');
+  const schema = require('./sql/schema'); //create tables
+})
+.catch(err => {
+  console.log('Unable to connect to database: ', err);
+})
 
-  module.exports = {
-    db
-  }
-  const schema = require('./sql/schema.js');
+module.exports = {
+  db
+}
+
