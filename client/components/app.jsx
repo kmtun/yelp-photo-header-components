@@ -28,6 +28,11 @@ class App extends Component {
             <css.header.search type="text" placeholder="Los Angeles, CA">
             </css.header.search>
 
+            <css.header.search_button primary>
+              <span> <i className="fas fa-search"></i> </span>
+            </css.header.search_button>
+        
+
           </css.header.h_content>
         </css.header.h>
 
@@ -42,7 +47,7 @@ class App extends Component {
                   </css.header.nav_link>
                 ))}
                 </div>
-                
+
                 <div id="beefore"> &#183; </div> 
 
                 <div style={{display: 'inline-block'}}>

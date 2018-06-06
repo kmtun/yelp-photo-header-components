@@ -888,7 +888,18 @@ var App = function (_Component) {
             null,
             _react2.default.createElement(_style2.default.header.logo, null),
             _react2.default.createElement(_style2.default.header.search, { type: 'text', placeholder: 'tacos, cheap dinner, Max\'s' }),
-            _react2.default.createElement(_style2.default.header.search, { type: 'text', placeholder: 'Los Angeles, CA' })
+            _react2.default.createElement(_style2.default.header.search, { type: 'text', placeholder: 'Los Angeles, CA' }),
+            _react2.default.createElement(
+              _style2.default.header.search_button,
+              { primary: true },
+              _react2.default.createElement(
+                'span',
+                null,
+                ' ',
+                _react2.default.createElement('i', { className: 'fas fa-search' }),
+                ' '
+              )
+            )
           )
         ),
         _react2.default.createElement(
@@ -20328,11 +20339,12 @@ var _templateObject = _taggedTemplateLiteral(['\n  vertical-align: baseline;\n']
     _templateObject3 = _taggedTemplateLiteral(['\n    padding: 12px 0;\n    background: #D3231C url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_styleguide/15ee41b0c3b2/assets/img/structural/header_stars@2x.png) no-repeat center;\n    background-size: 1135px auto, 100%;\n  '], ['\n    padding: 12px 0;\n    background: #D3231C url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_styleguide/15ee41b0c3b2/assets/img/structural/header_stars@2x.png) no-repeat center;\n    background-size: 1135px auto, 100%;\n  ']),
     _templateObject4 = _taggedTemplateLiteral(['\n    width: 960px;\n    margin: 0 auto;\n    padding: 0 15px;\n\n    display: table;\n    table-layout: auto;\n  '], ['\n    width: 960px;\n    margin: 0 auto;\n    padding: 0 15px;\n\n    display: table;\n    table-layout: auto;\n  ']),
     _templateObject5 = _taggedTemplateLiteral(['\n    background-image: url(https://s3-media1.fl.yelpcdn.com/assets/srv0/yelp_design_web/48792dd29811/assets/img/logos_desktop/default.png);\n    background-size: 80px 40px;\n    width: 80px;\n    height: 40px; \n    display: table-cell;\n  '], ['\n    background-image: url(https://s3-media1.fl.yelpcdn.com/assets/srv0/yelp_design_web/48792dd29811/assets/img/logos_desktop/default.png);\n    background-size: 80px 40px;\n    width: 80px;\n    height: 40px; \n    display: table-cell;\n  ']),
-    _templateObject6 = _taggedTemplateLiteral(['\n    display: table-cell;\n    height: 20px;\n    width: 285px;\n    padding: 0 30px;\n    border-radius: 4px 0 0 4px;\n    vertical-align: middle;\n    height: 36px;\n    line-height: 20px;\n  '], ['\n    display: table-cell;\n    height: 20px;\n    width: 285px;\n    padding: 0 30px;\n    border-radius: 4px 0 0 4px;\n    vertical-align: middle;\n    height: 36px;\n    line-height: 20px;\n  ']),
-    _templateObject7 = _taggedTemplateLiteral([' \n    background: #bd1f1f;\n    min-width: 1080px;\n  '], [' \n    background: #bd1f1f;\n    min-width: 1080px;\n  ']),
-    _templateObject8 = _taggedTemplateLiteral(['\n    width: 960px;\n    margin: 0 auto;\n    padding: 0 15px;\n  '], ['\n    width: 960px;\n    margin: 0 auto;\n    padding: 0 15px;\n  ']),
-    _templateObject9 = _taggedTemplateLiteral(['\n    margin-left: -12px;\n    whitespace: nowrap !important;\n  '], ['\n    margin-left: -12px;\n    whitespace: nowrap !important;\n  ']),
-    _templateObject10 = _taggedTemplateLiteral(['\n    color: #fff;\n    display: inline;\n    padding: 3px 15px;\n    // font-family: monospace;\n    font-size: 15px;\n    font-weight: bold;\n    line-height: 21px;\n    border-radius: 3px;\n    text-decoration: none;\n    &:hover{\n      background: rgba(51,51,51,0.3);\n      }\n  '], ['\n    color: #fff;\n    display: inline;\n    padding: 3px 15px;\n    // font-family: monospace;\n    font-size: 15px;\n    font-weight: bold;\n    line-height: 21px;\n    border-radius: 3px;\n    text-decoration: none;\n    &:hover{\n      background: rgba(51,51,51,0.3);\n      }\n  ']);
+    _templateObject6 = _taggedTemplateLiteral(['\n    display: table-cell;\n    width: 285px;\n    padding: 0 30px;\n    border-radius: 4px 0 0 4px;\n    vertical-align: middle;\n    height: 36px;\n    line-height: 20px;\n  '], ['\n    display: table-cell;\n    width: 285px;\n    padding: 0 30px;\n    border-radius: 4px 0 0 4px;\n    vertical-align: middle;\n    height: 36px;\n    line-height: 20px;\n  ']),
+    _templateObject7 = _taggedTemplateLiteral(['\n    display: table-cell;  \n    width: 54px;\n    height: 36px;\n    border: none:\n    border-radius: 4px 0 0 4px;\n    vertical-align: middle;\n    background: #bd1f1f;\n    line-height: 36px;\n    font-size:100%;\n  '], ['\n    display: table-cell;  \n    width: 54px;\n    height: 36px;\n    border: none:\n    border-radius: 4px 0 0 4px;\n    vertical-align: middle;\n    background: #bd1f1f;\n    line-height: 36px;\n    font-size:100%;\n  ']),
+    _templateObject8 = _taggedTemplateLiteral([' \n    background: #bd1f1f;\n    min-width: 1080px;\n  '], [' \n    background: #bd1f1f;\n    min-width: 1080px;\n  ']),
+    _templateObject9 = _taggedTemplateLiteral(['\n    width: 960px;\n    margin: 0 auto;\n    padding: 0 15px;\n  '], ['\n    width: 960px;\n    margin: 0 auto;\n    padding: 0 15px;\n  ']),
+    _templateObject10 = _taggedTemplateLiteral(['\n    margin-left: -12px;\n    whitespace: nowrap !important;\n  '], ['\n    margin-left: -12px;\n    whitespace: nowrap !important;\n  ']),
+    _templateObject11 = _taggedTemplateLiteral(['\n    color: #fff;\n    display: inline;\n    padding: 3px 15px;\n    // font-family: monospace;\n    font-size: 15px;\n    font-weight: bold;\n    line-height: 21px;\n    border-radius: 3px;\n    text-decoration: none;\n    &:hover{\n      background: rgba(51,51,51,0.3);\n      }\n  '], ['\n    color: #fff;\n    display: inline;\n    padding: 3px 15px;\n    // font-family: monospace;\n    font-size: 15px;\n    font-weight: bold;\n    line-height: 21px;\n    border-radius: 3px;\n    text-decoration: none;\n    &:hover{\n      background: rgba(51,51,51,0.3);\n      }\n  ']);
 
 var _react = __webpack_require__(3);
 
@@ -20358,16 +20370,18 @@ var header = {
   logo: headerDiv.extend(_templateObject5),
 
   search: _styledComponents2.default.input(_templateObject6),
+
+  search_button: _styledComponents2.default.button(_templateObject7),
   //wrapper for whole nav bar
-  nav: _styledComponents2.default.div(_templateObject7),
+  nav: _styledComponents2.default.div(_templateObject8),
 
   //Need this in order to allign with yelp logo
-  nav_content_header: _styledComponents2.default.div(_templateObject8),
+  nav_content_header: _styledComponents2.default.div(_templateObject9),
 
   //nav bar to hold all a href links
-  nav_content: _styledComponents2.default.nav(_templateObject9),
-  nav_link: _styledComponents2.default.a(_templateObject10),
-  nav_link2: _styledComponents2.default.a(_templateObject10)
+  nav_content: _styledComponents2.default.nav(_templateObject10),
+  nav_link: _styledComponents2.default.a(_templateObject11),
+  nav_link2: _styledComponents2.default.a(_templateObject11)
 };
 
 module.exports = {

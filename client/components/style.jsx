@@ -39,13 +39,24 @@ const header = {
   
   search: styled.input`
     display: table-cell;
-    height: 20px;
     width: 285px;
     padding: 0 30px;
     border-radius: 4px 0 0 4px;
     vertical-align: middle;
     height: 36px;
     line-height: 20px;
+  `,
+
+  search_button: styled.button`
+    display: table-cell;  
+    width: 54px;
+    height: 36px;
+    border: none:
+    border-radius: 4px 0 0 4px;
+    vertical-align: middle;
+    background: #bd1f1f;
+    line-height: 36px;
+    font-size:100%;
   `,
   //wrapper for whole nav bar
   nav: styled.div` 
