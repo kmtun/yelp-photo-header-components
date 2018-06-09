@@ -2,7 +2,10 @@ import React from 'react';
 import { Component } from 'react';
 import css from './style.jsx';
 import $ from 'jquery';
-
+import Mapdetails from './mapDetails.jsx';
+import MapBox from './mapBox.jsx';
+import Photos from './photos.jsx';
+import ResHeader from './restHeader.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -148,8 +151,20 @@ class App extends Component {
 
           </css.rest_details.rest_header>
 
+          {/* Container for mapbox and photos */}
           <css.rest_subheader.subH>
-            Hello
+            {/* Container for mapBox and directions and details */}
+            <css.rest_subheader.mapBox>
+              <MapBox />
+
+              {/* Map details */}
+              <Mapdetails />
+
+            </css.rest_subheader.mapBox>
+
+            {/* photos */}
+            <Photos />
+
           </css.rest_subheader.subH>
         </css.rest_details.h>
 

@@ -163,7 +163,7 @@ const header = {
 const default_div = styled.div`
   margin: 0;
   padding: 0;
-  bordeR: 0;
+  border: 0;
   font-size: 100%;
   vertical-align: baseline;
   display: block;
@@ -277,6 +277,22 @@ const rest_details = {
     line-height: 27px;
   `
 }
+
+
+const map_details = styled.li`
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+`;
+
+const default_span = styled.span`
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+`
 const rest_subheader = {
   subH: default_div.extend`
     margin-top: 20px;
@@ -284,7 +300,90 @@ const rest_subheader = {
     height: 318px;
     display: table;
   `,
+  mapBox: default_div.extend`
+    width: 288px;
+    height: 306px;
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #ccc;
+    display: table-cell;
+    vertical-align: middle;
+  `,
+  mapImage: styled.img`
+    width: 286px;
+    height: 135px;
+    vertical-align: middle;
+  `,
+  mapText: default_div.extend`
+    width: 288px;
+    height: 159px;
+  `,
+  mapDetails: map_details.extend`
+    margin-bottom: 3px;
+    position: relative !important;
+  `,
+  map_icon_spacing: styled.div`
+    line-height: 18px;
+    margin-left: 24px !important;
+    font-size: 100%;
+    display: inline-block;
+  `,
+  icons: default_span.extend`
+    width: 18px;
+    height: 18px;
+    top: 0 !important;
+    position: absolute !important;
+    display: inline-block;
+    vertical-align: middle;
+    fill: #666;
+  `
+}
+const defaultPhoto = default_div.extend`
+  z-index: 1000;
+  position: absolute;
+  margin: -15px;
+  width: 250px;
+  height: 250px;
+  box-shadow: none;
+  left: 0;
+  transform: scale(.88) translateZ(0);
+  &:hover{ 
+    -webkit-transition: all 0.2s ease-out;
+    -webkit-transition-property: transform, box-shadow;
+    -webkit-transform: scale(1);
+  }
+`;
+
+const photos = {
+  h: default_div.extend`
+    width: 660px;
+    height: 318px;
+    display: table-cell;
+    vertical-align: middle;
+  `,
+  sub_h: default_div.extend`
+    width: 660px;
+    height: 220px;
+    position: relative;
+    transform-style: preserve-3d;
+  `,
+  left_photo: defaultPhoto.extend`
+  `,
+
+  middle_photo: defaultPhoto.extend`
+    left: 220px;
+    z-index: 1001;
+    box-shadow: 0 0 25px -3px rgba(0,0,0,0.5);
+    transform: translateZ(1px);
+    &:hover{ 
+      -webkit-transform: translateZ(5px) !important;
+    }
+  `,
+  right_photo: defaultPhoto.extend`
+    left: 440px;
+    z-index: 1000;
+  `,
 }
 module.exports = {
-  header, rest_details, rest_subheader, header_spacing
+  header, rest_details, rest_subheader, photos, header_spacing
 };

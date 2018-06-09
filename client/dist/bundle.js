@@ -869,6 +869,22 @@ var _jquery = __webpack_require__(26);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
+var _mapDetails = __webpack_require__(45);
+
+var _mapDetails2 = _interopRequireDefault(_mapDetails);
+
+var _mapBox = __webpack_require__(44);
+
+var _mapBox2 = _interopRequireDefault(_mapBox);
+
+var _photos = __webpack_require__(43);
+
+var _photos2 = _interopRequireDefault(_photos);
+
+var _restHeader = __webpack_require__(46);
+
+var _restHeader2 = _interopRequireDefault(_restHeader);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1083,7 +1099,13 @@ var App = function (_Component) {
           _react2.default.createElement(
             _style2.default.rest_subheader.subH,
             null,
-            'Hello'
+            _react2.default.createElement(
+              _style2.default.rest_subheader.mapBox,
+              null,
+              _react2.default.createElement(_mapBox2.default, null),
+              _react2.default.createElement(_mapDetails2.default, null)
+            ),
+            _react2.default.createElement(_photos2.default, null)
           )
         )
       ) // main div components
@@ -1167,7 +1189,7 @@ var _templateObject = _taggedTemplateLiteral(['\n  vertical-align: baseline;\n']
     _templateObject16 = _taggedTemplateLiteral(['\n    color: #fff;\n    display: inline;\n    padding: 3px 15px;\n    // font-family: monospace;\n    font-size: 15px;\n    font-weight: bold;\n    line-height: 21px;\n    border-radius: 3px;\n    text-decoration: none;\n    &:hover{\n      background: rgba(51,51,51,0.3);\n      }\n  '], ['\n    color: #fff;\n    display: inline;\n    padding: 3px 15px;\n    // font-family: monospace;\n    font-size: 15px;\n    font-weight: bold;\n    line-height: 21px;\n    border-radius: 3px;\n    text-decoration: none;\n    &:hover{\n      background: rgba(51,51,51,0.3);\n      }\n  ']),
     _templateObject17 = _taggedTemplateLiteral(['\n    // box-sizing: border-box;\n    display: table-cell;\n    // vertical-align: top;\n    text-align: center;\n  '], ['\n    // box-sizing: border-box;\n    display: table-cell;\n    // vertical-align: top;\n    text-align: center;\n  ']),
     _templateObject18 = _taggedTemplateLiteral(['\n    color: #fff;\n    // display: inline;\n    padding: 0 12px 0;\n    font-size: 15px;\n    font-weight: bold;\n    line-height: 21px;\n  '], ['\n    color: #fff;\n    // display: inline;\n    padding: 0 12px 0;\n    font-size: 15px;\n    font-weight: bold;\n    line-height: 21px;\n  ']),
-    _templateObject19 = _taggedTemplateLiteral(['\n  margin: 0;\n  padding: 0;\n  bordeR: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  display: block;\n'], ['\n  margin: 0;\n  padding: 0;\n  bordeR: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  display: block;\n']),
+    _templateObject19 = _taggedTemplateLiteral(['\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  display: block;\n'], ['\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  display: block;\n']),
     _templateObject20 = _taggedTemplateLiteral(['\n    height: 443px;\n    width: 960px;\n    padding: 3px;\n    margin: 0 296px 0;\n    z-index: 1;\n  '], ['\n    height: 443px;\n    width: 960px;\n    padding: 3px;\n    margin: 0 296px 0;\n    z-index: 1;\n  ']),
     _templateObject21 = _taggedTemplateLiteral(['\n    width: 960px;\n    height: 112px;\n    position: relative;\n    display: flex;\n    align-items: center;\n    width: 100%;\n    margin-bottom: 13px;\n  '], ['\n    width: 960px;\n    height: 112px;\n    position: relative;\n    display: flex;\n    align-items: center;\n    width: 100%;\n    margin-bottom: 13px;\n  ']),
     _templateObject22 = _taggedTemplateLiteral(['\n    width: 545px;\n    height: 112px;\n    padding-right: 30px;\n    display: inline;\n  '], ['\n    width: 545px;\n    height: 112px;\n    padding-right: 30px;\n    display: inline;\n  ']),
@@ -1181,7 +1203,21 @@ var _templateObject = _taggedTemplateLiteral(['\n  vertical-align: baseline;\n']
     _templateObject30 = _taggedTemplateLiteral(['\n    color: white;\n    text-decoration: none;\n    font-weight: bold;\n    font-size: 18px;\n    line-height: 35px;\n    &:hover{\n      background: rgba(51,51,51,0.3);\n    }\n  '], ['\n    color: white;\n    text-decoration: none;\n    font-weight: bold;\n    font-size: 18px;\n    line-height: 35px;\n    &:hover{\n      background: rgba(51,51,51,0.3);\n    }\n  ']),
     _templateObject31 = _taggedTemplateLiteral(['\n    width: 224px;\n    height: 30px;\n    vertical-align: baseline;\n    float: right;\n    margin-top: 4px;\n  '], ['\n    width: 224px;\n    height: 30px;\n    vertical-align: baseline;\n    float: right;\n    margin-top: 4px;\n  ']),
     _templateObject32 = _taggedTemplateLiteral(['\n    padding: 5px 8px;\n    height: 17px;\n    width: 62px;\n    vertical-align: middle;\n    background: linear-gradient(#fff, #f7f7f7);\n    background-color: #f7f7f7;\n    border: 1px solid;\n    border-color: #ccc;\n    box-shadow: 0 1px 1px rgba(0,0,0,0.1);\n    color: #666;\n    text-align: center;\n    font-size: 14px;\n    font-weight: bold;\n    text-decoration: none;\n    line-height: 27px;\n  '], ['\n    padding: 5px 8px;\n    height: 17px;\n    width: 62px;\n    vertical-align: middle;\n    background: linear-gradient(#fff, #f7f7f7);\n    background-color: #f7f7f7;\n    border: 1px solid;\n    border-color: #ccc;\n    box-shadow: 0 1px 1px rgba(0,0,0,0.1);\n    color: #666;\n    text-align: center;\n    font-size: 14px;\n    font-weight: bold;\n    text-decoration: none;\n    line-height: 27px;\n  ']),
-    _templateObject33 = _taggedTemplateLiteral(['\n    margin-top: 20px;\n    width: 960px;\n    height: 318px;\n    display: table;\n  '], ['\n    margin-top: 20px;\n    width: 960px;\n    height: 318px;\n    display: table;\n  ']);
+    _templateObject33 = _taggedTemplateLiteral(['\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n'], ['\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n']),
+    _templateObject34 = _taggedTemplateLiteral(['\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n'], ['\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n']),
+    _templateObject35 = _taggedTemplateLiteral(['\n    margin-top: 20px;\n    width: 960px;\n    height: 318px;\n    display: table;\n  '], ['\n    margin-top: 20px;\n    width: 960px;\n    height: 318px;\n    display: table;\n  ']),
+    _templateObject36 = _taggedTemplateLiteral(['\n    width: 288px;\n    height: 306px;\n    padding: 5px;\n    background: #fff;\n    border: 1px solid #ccc;\n    display: table-cell;\n    vertical-align: middle;\n  '], ['\n    width: 288px;\n    height: 306px;\n    padding: 5px;\n    background: #fff;\n    border: 1px solid #ccc;\n    display: table-cell;\n    vertical-align: middle;\n  ']),
+    _templateObject37 = _taggedTemplateLiteral(['\n    width: 286px;\n    height: 135px;\n    vertical-align: middle;\n  '], ['\n    width: 286px;\n    height: 135px;\n    vertical-align: middle;\n  ']),
+    _templateObject38 = _taggedTemplateLiteral(['\n    width: 288px;\n    height: 159px;\n  '], ['\n    width: 288px;\n    height: 159px;\n  ']),
+    _templateObject39 = _taggedTemplateLiteral(['\n    margin-bottom: 3px;\n    position: relative !important;\n  '], ['\n    margin-bottom: 3px;\n    position: relative !important;\n  ']),
+    _templateObject40 = _taggedTemplateLiteral(['\n    line-height: 18px;\n    margin-left: 24px !important;\n    font-size: 100%;\n    display: inline-block;\n  '], ['\n    line-height: 18px;\n    margin-left: 24px !important;\n    font-size: 100%;\n    display: inline-block;\n  ']),
+    _templateObject41 = _taggedTemplateLiteral(['\n    width: 18px;\n    height: 18px;\n    top: 0 !important;\n    position: absolute !important;\n    display: inline-block;\n    vertical-align: middle;\n    fill: #666;\n  '], ['\n    width: 18px;\n    height: 18px;\n    top: 0 !important;\n    position: absolute !important;\n    display: inline-block;\n    vertical-align: middle;\n    fill: #666;\n  ']),
+    _templateObject42 = _taggedTemplateLiteral(['\n  z-index: 1000;\n  position: absolute;\n  margin: -15px;\n  width: 250px;\n  height: 250px;\n  box-shadow: none;\n  left: 0;\n  transform: scale(.88) translateZ(0);\n  &:hover{ \n    -webkit-transition: all 0.2s ease-out;\n    -webkit-transition-property: transform, box-shadow;\n    -webkit-transform: scale(1);\n  }\n'], ['\n  z-index: 1000;\n  position: absolute;\n  margin: -15px;\n  width: 250px;\n  height: 250px;\n  box-shadow: none;\n  left: 0;\n  transform: scale(.88) translateZ(0);\n  &:hover{ \n    -webkit-transition: all 0.2s ease-out;\n    -webkit-transition-property: transform, box-shadow;\n    -webkit-transform: scale(1);\n  }\n']),
+    _templateObject43 = _taggedTemplateLiteral(['\n    width: 660px;\n    height: 318px;\n    display: table-cell;\n    vertical-align: middle;\n  '], ['\n    width: 660px;\n    height: 318px;\n    display: table-cell;\n    vertical-align: middle;\n  ']),
+    _templateObject44 = _taggedTemplateLiteral(['\n    width: 660px;\n    height: 220px;\n    position: relative;\n    transform-style: preserve-3d;\n  '], ['\n    width: 660px;\n    height: 220px;\n    position: relative;\n    transform-style: preserve-3d;\n  ']),
+    _templateObject45 = _taggedTemplateLiteral(['\n  '], ['\n  ']),
+    _templateObject46 = _taggedTemplateLiteral(['\n    left: 220px;\n    z-index: 1001;\n    box-shadow: 0 0 25px -3px rgba(0,0,0,0.5);\n    transform: translateZ(1px);\n    &:hover{ \n      -webkit-transform: translateZ(5px) !important;\n    }\n  '], ['\n    left: 220px;\n    z-index: 1001;\n    box-shadow: 0 0 25px -3px rgba(0,0,0,0.5);\n    transform: translateZ(1px);\n    &:hover{ \n      -webkit-transform: translateZ(5px) !important;\n    }\n  ']),
+    _templateObject47 = _taggedTemplateLiteral(['\n    left: 440px;\n    z-index: 1000;\n  '], ['\n    left: 440px;\n    z-index: 1000;\n  ']);
 
 var _react = __webpack_require__(3);
 
@@ -1256,11 +1292,31 @@ var rest_details = {
   spanTagForAction: _styledComponents2.default.span(_templateObject31),
   action_button: _styledComponents2.default.a(_templateObject32)
 };
+
+var map_details = _styledComponents2.default.li(_templateObject33);
+
+var default_span = _styledComponents2.default.span(_templateObject34);
 var rest_subheader = {
-  subH: default_div.extend(_templateObject33)
+  subH: default_div.extend(_templateObject35),
+  mapBox: default_div.extend(_templateObject36),
+  mapImage: _styledComponents2.default.img(_templateObject37),
+  mapText: default_div.extend(_templateObject38),
+  mapDetails: map_details.extend(_templateObject39),
+  map_icon_spacing: _styledComponents2.default.div(_templateObject40),
+  icons: default_span.extend(_templateObject41)
+};
+var defaultPhoto = default_div.extend(_templateObject42);
+
+var photos = {
+  h: default_div.extend(_templateObject43),
+  sub_h: default_div.extend(_templateObject44),
+  left_photo: defaultPhoto.extend(_templateObject45),
+
+  middle_photo: defaultPhoto.extend(_templateObject46),
+  right_photo: defaultPhoto.extend(_templateObject47)
 };
 module.exports = {
-  header: header, rest_details: rest_details, rest_subheader: rest_subheader, header_spacing: header_spacing
+  header: header, rest_details: rest_details, rest_subheader: rest_subheader, photos: photos, header_spacing: header_spacing
 };
 
 /***/ }),
@@ -35940,6 +35996,393 @@ module.exports = function(originalModule) {
 	return module;
 };
 
+
+/***/ }),
+/* 41 */,
+/* 42 */,
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _style = __webpack_require__(15);
+
+var _style2 = _interopRequireDefault(_style);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Photos = function (_Component) {
+  _inherits(Photos, _Component);
+
+  function Photos(props) {
+    _classCallCheck(this, Photos);
+
+    var _this = _possibleConstructorReturn(this, (Photos.__proto__ || Object.getPrototypeOf(Photos)).call(this, props));
+
+    _this.state = {
+      leftPhoto: [],
+      middlePhoto: [],
+      rightPhoto: []
+    };
+    return _this;
+  }
+
+  _createClass(Photos, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        _style2.default.photos.h,
+        null,
+        _react2.default.createElement(
+          _style2.default.photos.sub_h,
+          null,
+          _react2.default.createElement(
+            _style2.default.photos.left_photo,
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: '/' },
+              _react2.default.createElement('img', { height: '250', src: 'https://s3-media2.fl.yelpcdn.com/bphoto/JDTkes8xSj0u_HmmeHfjxQ/ls.jpg', width: '250' })
+            )
+          ),
+          _react2.default.createElement(
+            _style2.default.photos.middle_photo,
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: '/' },
+              _react2.default.createElement('img', { height: '250', src: 'https://s3-media3.fl.yelpcdn.com/bphoto/D_85DieA8-G1IDlEjtmU2w/ls.jpg', width: '250' })
+            )
+          ),
+          _react2.default.createElement(
+            _style2.default.photos.right_photo,
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: '/' },
+              _react2.default.createElement('img', { height: '125', style: { float: 'left' }, src: 'https://s3-media1.fl.yelpcdn.com/bphoto/lkvDaCpHw5A-5vW05vF-Ww/ls.jpg', width: '125' })
+            ),
+            _react2.default.createElement(
+              'a',
+              { href: '/' },
+              _react2.default.createElement('img', { height: '125', style: { float: 'left' }, src: 'https://s3-media1.fl.yelpcdn.com/bphoto/uOriAxEMthRbmQxBi9FIHQ/180s.jpg', width: '125' })
+            ),
+            _react2.default.createElement(
+              'a',
+              { href: '/' },
+              _react2.default.createElement('img', { height: '125', style: { float: 'left' }, src: 'https://s3-media2.fl.yelpcdn.com/bphoto/PnGVlBtuW_RhHVvR5xaWCA/180s.jpg', width: '125' })
+            ),
+            _react2.default.createElement(
+              'a',
+              { href: '/' },
+              _react2.default.createElement('img', { height: '125', style: { float: 'left' }, src: 'https://s3-media1.fl.yelpcdn.com/bphoto/z88-7_3LGzyiGa_1uU7ByA/180s.jpg', width: '125' })
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Photos;
+}(_react.Component);
+
+exports.default = Photos;
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _style = __webpack_require__(15);
+
+var _style2 = _interopRequireDefault(_style);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var MapBox = function MapBox(props) {
+  return _react2.default.createElement(_style2.default.rest_subheader.mapImage, { src: 'https://maps.googleapis.com/maps/api/staticmap?scale=2&center=34.142036%2C-118.132046&language=None&zoom=15&markers=scale%3A2%7Cicon%3Ahttps%3A%2F%2Fyelp-images.s3.amazonaws.com%2Fassets%2Fmap-markers%2Fannotation_64x86.png%7C34.142036%2C-118.132046&client=gme-yelp&sensor=false&size=286x135&signature=EiISUhp-4K5YVTX2ObLTFnPm2TA=' });
+};
+exports.default = MapBox;
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _style = __webpack_require__(15);
+
+var _style2 = _interopRequireDefault(_style);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Mapdetails = function Mapdetails(props) {
+  return _react2.default.createElement(
+    _style2.default.rest_subheader.mapText,
+    null,
+    _react2.default.createElement(
+      'ul',
+      { style: { margin: '5px', listStyle: 'none', padding: '0', width: '278px', height: '159px' } },
+      _react2.default.createElement(
+        _style2.default.rest_subheader.mapDetails,
+        null,
+        _react2.default.createElement(
+          _style2.default.rest_subheader.icons,
+          null,
+          _react2.default.createElement('i', { className: 'fas fa-map-marker' })
+        ),
+        _react2.default.createElement(
+          _style2.default.rest_subheader.map_icon_spacing,
+          null,
+          _react2.default.createElement(
+            'strong',
+            { style: { fontWeight: 'bold' } },
+            '218 S Lake Ave  ',
+            _react2.default.createElement('br', null),
+            ' Pasadena, CA 91101'
+          ),
+          _react2.default.createElement(
+            'span',
+            null,
+            ' ',
+            _react2.default.createElement('br', null),
+            ' Pasadena '
+          )
+        )
+      ),
+      _react2.default.createElement(
+        _style2.default.rest_subheader.mapDetails,
+        null,
+        _react2.default.createElement(
+          _style2.default.rest_subheader.icons,
+          null,
+          _react2.default.createElement('i', { className: 'fas fa-map-signs' })
+        ),
+        _react2.default.createElement(
+          _style2.default.rest_subheader.map_icon_spacing,
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: '/', style: { color: '#0073bb', textDecoration: 'none' } },
+            ' Get Directions '
+          )
+        )
+      ),
+      _react2.default.createElement(
+        _style2.default.rest_subheader.mapDetails,
+        null,
+        _react2.default.createElement(
+          _style2.default.rest_subheader.icons,
+          null,
+          _react2.default.createElement('i', { className: 'fas fa-phone' })
+        ),
+        _react2.default.createElement(
+          _style2.default.rest_subheader.map_icon_spacing,
+          null,
+          '(626) 202-1616'
+        )
+      ),
+      _react2.default.createElement(
+        _style2.default.rest_subheader.mapDetails,
+        null,
+        _react2.default.createElement(
+          _style2.default.rest_subheader.icons,
+          null,
+          _react2.default.createElement('i', { className: 'fas fa-external-link-alt' })
+        ),
+        _react2.default.createElement(
+          _style2.default.rest_subheader.map_icon_spacing,
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: '/', style: { color: '#0073bb', textDecoration: 'none' } },
+            ' urbanecafe.com '
+          )
+        )
+      ),
+      _react2.default.createElement(
+        _style2.default.rest_subheader.mapDetails,
+        null,
+        _react2.default.createElement(
+          _style2.default.rest_subheader.icons,
+          null,
+          _react2.default.createElement('i', { className: 'fas fa-comment-alt' })
+        ),
+        _react2.default.createElement(
+          _style2.default.rest_subheader.map_icon_spacing,
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: '/', style: { color: '#0073bb', textDecoration: 'none' } },
+            ' Message the business '
+          )
+        )
+      ),
+      _react2.default.createElement(
+        _style2.default.rest_subheader.mapDetails,
+        null,
+        _react2.default.createElement(
+          _style2.default.rest_subheader.icons,
+          null,
+          _react2.default.createElement('i', { className: 'fas fa-mobile-alt' })
+        ),
+        _react2.default.createElement(
+          _style2.default.rest_subheader.map_icon_spacing,
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: '/', style: { color: '#0073bb', textDecoration: 'none' } },
+            ' Send to your Phone '
+          )
+        )
+      )
+    )
+  );
+};
+exports.default = Mapdetails;
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _style = __webpack_require__(15);
+
+var _style2 = _interopRequireDefault(_style);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var RestHeader = function RestHeader(props) {
+  return _react2.default.createElement(
+    _style2.default.rest_details.rest_header,
+    null,
+    _react2.default.createElement(
+      _style2.default.rest_details.left_h,
+      null,
+      _react2.default.createElement(
+        _style2.default.rest_details.title_claim_div,
+        null,
+        _react2.default.createElement(
+          'h1',
+          { style: { fontSize: '38px', fontWeight: 'bold', display: 'inline', paddingRight: '10px' } },
+          'Urbane Cafe'
+        ),
+        _react2.default.createElement(
+          'div',
+          { style: { display: 'inline-block' } },
+          _react2.default.createElement(
+            'span',
+            { style: { width: '18px', height: '18px', paddingRight: '10px' } },
+            _react2.default.createElement('i', { className: 'far fa-check-circle' })
+          ),
+          'Claimed'
+        )
+      ),
+      _react2.default.createElement(
+        _style2.default.rest_details.ratings_div,
+        null,
+        _react2.default.createElement(_style2.default.rest_details.rating_stars, { style: { backgroundPosition: '0 -192px' } }),
+        _react2.default.createElement(
+          'span',
+          { style: { color: '#666' } },
+          ' 46 Reviews '
+        )
+      ),
+      _react2.default.createElement(
+        _style2.default.rest_details.category_div,
+        null,
+        _react2.default.createElement(
+          'span',
+          { style: { letterSpacing: '1px' } },
+          ' $$   \xB7 '
+        ),
+        undefined.state.categories.map(function (value, index) {
+          return _react2.default.createElement(
+            _style2.default.rest_details.category,
+            { href: '/', key: index },
+            ' ',
+            value,
+            ' '
+          );
+        })
+      )
+    ),
+    _react2.default.createElement(
+      _style2.default.rest_details.right_h,
+      null,
+      _react2.default.createElement(
+        _style2.default.rest_details.divForReviewButton,
+        null,
+        _react2.default.createElement(
+          _style2.default.rest_details.review_button,
+          { href: '/' },
+          _react2.default.createElement('i', { className: 'fas fa-star' }),
+          ' Write a review'
+        )
+      ),
+      _react2.default.createElement(
+        _style2.default.rest_details.spanTagForAction,
+        null,
+        undefined.state.actions.map(function (value, index) {
+          return _react2.default.createElement(
+            _style2.default.rest_details.action_button,
+            { key: index, href: '/' },
+            _react2.default.createElement('i', { className: action_icons[index] }),
+            ' ',
+            value
+          );
+        })
+      )
+    )
+  );
+};
+exports.default = RestHeader;
 
 /***/ })
 /******/ ]);
