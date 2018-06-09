@@ -277,6 +277,14 @@ const rest_details = {
     line-height: 27px;
   `
 }
+const rest_subheader = {
+  subH: default_div.extend`
+    margin-top: 20px;
+    width: 960px;
+    height: 318px;
+    display: table;
+  `,
+}
 module.exports = {
-  header, rest_details, header_spacing
+  header, rest_details, rest_subheader, header_spacing
 };

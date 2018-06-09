@@ -1079,6 +1079,11 @@ var App = function (_Component) {
                 })
               )
             )
+          ),
+          _react2.default.createElement(
+            _style2.default.rest_subheader.subH,
+            null,
+            'Hello'
           )
         )
       ) // main div components
@@ -1175,7 +1180,8 @@ var _templateObject = _taggedTemplateLiteral(['\n  vertical-align: baseline;\n']
     _templateObject29 = _taggedTemplateLiteral(['\n    display: inline-block;\n    vertical-align: middle;\n    height: 36px;\n    width: 158px;\n    border-color: #8d0005;\n    border-radius: 4px;\n    box-shadow: 0 1px 1px rgba(0,0,0,0.3);\n    background: linear-gradient(#d90007, #c91400);\n    margin-right: 12px;\n    text-align: center;\n  '], ['\n    display: inline-block;\n    vertical-align: middle;\n    height: 36px;\n    width: 158px;\n    border-color: #8d0005;\n    border-radius: 4px;\n    box-shadow: 0 1px 1px rgba(0,0,0,0.3);\n    background: linear-gradient(#d90007, #c91400);\n    margin-right: 12px;\n    text-align: center;\n  ']),
     _templateObject30 = _taggedTemplateLiteral(['\n    color: white;\n    text-decoration: none;\n    font-weight: bold;\n    font-size: 18px;\n    line-height: 35px;\n    &:hover{\n      background: rgba(51,51,51,0.3);\n    }\n  '], ['\n    color: white;\n    text-decoration: none;\n    font-weight: bold;\n    font-size: 18px;\n    line-height: 35px;\n    &:hover{\n      background: rgba(51,51,51,0.3);\n    }\n  ']),
     _templateObject31 = _taggedTemplateLiteral(['\n    width: 224px;\n    height: 30px;\n    vertical-align: baseline;\n    float: right;\n    margin-top: 4px;\n  '], ['\n    width: 224px;\n    height: 30px;\n    vertical-align: baseline;\n    float: right;\n    margin-top: 4px;\n  ']),
-    _templateObject32 = _taggedTemplateLiteral(['\n    padding: 5px 8px;\n    height: 17px;\n    width: 62px;\n    vertical-align: middle;\n    background: linear-gradient(#fff, #f7f7f7);\n    background-color: #f7f7f7;\n    border: 1px solid;\n    border-color: #ccc;\n    box-shadow: 0 1px 1px rgba(0,0,0,0.1);\n    color: #666;\n    text-align: center;\n    font-size: 14px;\n    font-weight: bold;\n    text-decoration: none;\n    line-height: 27px;\n  '], ['\n    padding: 5px 8px;\n    height: 17px;\n    width: 62px;\n    vertical-align: middle;\n    background: linear-gradient(#fff, #f7f7f7);\n    background-color: #f7f7f7;\n    border: 1px solid;\n    border-color: #ccc;\n    box-shadow: 0 1px 1px rgba(0,0,0,0.1);\n    color: #666;\n    text-align: center;\n    font-size: 14px;\n    font-weight: bold;\n    text-decoration: none;\n    line-height: 27px;\n  ']);
+    _templateObject32 = _taggedTemplateLiteral(['\n    padding: 5px 8px;\n    height: 17px;\n    width: 62px;\n    vertical-align: middle;\n    background: linear-gradient(#fff, #f7f7f7);\n    background-color: #f7f7f7;\n    border: 1px solid;\n    border-color: #ccc;\n    box-shadow: 0 1px 1px rgba(0,0,0,0.1);\n    color: #666;\n    text-align: center;\n    font-size: 14px;\n    font-weight: bold;\n    text-decoration: none;\n    line-height: 27px;\n  '], ['\n    padding: 5px 8px;\n    height: 17px;\n    width: 62px;\n    vertical-align: middle;\n    background: linear-gradient(#fff, #f7f7f7);\n    background-color: #f7f7f7;\n    border: 1px solid;\n    border-color: #ccc;\n    box-shadow: 0 1px 1px rgba(0,0,0,0.1);\n    color: #666;\n    text-align: center;\n    font-size: 14px;\n    font-weight: bold;\n    text-decoration: none;\n    line-height: 27px;\n  ']),
+    _templateObject33 = _taggedTemplateLiteral(['\n    margin-top: 20px;\n    width: 960px;\n    height: 318px;\n    display: table;\n  '], ['\n    margin-top: 20px;\n    width: 960px;\n    height: 318px;\n    display: table;\n  ']);
 
 var _react = __webpack_require__(3);
 
@@ -1250,8 +1256,11 @@ var rest_details = {
   spanTagForAction: _styledComponents2.default.span(_templateObject31),
   action_button: _styledComponents2.default.a(_templateObject32)
 };
+var rest_subheader = {
+  subH: default_div.extend(_templateObject33)
+};
 module.exports = {
-  header: header, rest_details: rest_details, header_spacing: header_spacing
+  header: header, rest_details: rest_details, rest_subheader: rest_subheader, header_spacing: header_spacing
 };
 
 /***/ }),

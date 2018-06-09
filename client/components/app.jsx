@@ -147,6 +147,10 @@ class App extends Component {
             </css.rest_details.right_h>
 
           </css.rest_details.rest_header>
+
+          <css.rest_subheader.subH>
+            Hello
+          </css.rest_subheader.subH>
         </css.rest_details.h>
 
       </div> // main div components
