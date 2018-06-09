@@ -888,7 +888,8 @@ var App = function (_Component) {
     _this.state = {
       static_nav_links: ['Restaurants', 'Nightlife', 'Home Services'],
       static_nav_links_2: ['Write a review', 'Events', 'Talk', 'Collections'],
-      categories: ['Sandwiches', 'Salad', 'American (New)']
+      categories: ['Sandwiches,', 'Salad,', 'American (New)'],
+      actions: ['Add Photo', 'Share', 'Save']
     };
     return _this;
   }
@@ -897,7 +898,7 @@ var App = function (_Component) {
     key: 'render',
     value: function render() {
       var nav_bar_icons = ['fas fa-utensils', 'fas fa-glass-martini', 'fas fa-screwdriver'];
-
+      var action_icons = ['fas fa-camera', 'far fa-share-square', 'fas fa-bookmark'];
       return _react2.default.createElement(
         'div',
         null,
@@ -998,54 +999,85 @@ var App = function (_Component) {
           _style2.default.rest_details.h,
           null,
           _react2.default.createElement(
-            _style2.default.rest_details.left_h,
+            _style2.default.rest_details.rest_header,
             null,
             _react2.default.createElement(
-              _style2.default.rest_details.title_claim_div,
+              _style2.default.rest_details.left_h,
               null,
               _react2.default.createElement(
-                'h1',
-                { style: { fontSize: '38px', fontWeight: 'bold', display: 'inline', paddingRight: '10px' } },
-                'Urbane Cafe'
+                _style2.default.rest_details.title_claim_div,
+                null,
+                _react2.default.createElement(
+                  'h1',
+                  { style: { fontSize: '38px', fontWeight: 'bold', display: 'inline', paddingRight: '10px' } },
+                  'Urbane Cafe'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { style: { display: 'inline-block' } },
+                  _react2.default.createElement(
+                    'span',
+                    { style: { width: '18px', height: '18px', paddingRight: '10px' } },
+                    _react2.default.createElement('i', { className: 'far fa-check-circle' })
+                  ),
+                  'Claimed'
+                )
               ),
               _react2.default.createElement(
-                'div',
-                { style: { display: 'inline-block' } },
+                _style2.default.rest_details.ratings_div,
+                null,
+                _react2.default.createElement(_style2.default.rest_details.rating_stars, { style: { backgroundPosition: '0 -192px' } }),
                 _react2.default.createElement(
                   'span',
-                  { style: { width: '18px', height: '18px', paddingRight: '10px' } },
-                  _react2.default.createElement('i', { className: 'far fa-check-circle' })
-                ),
-                'Claimed'
-              )
-            ),
-            _react2.default.createElement(
-              _style2.default.rest_details.ratings_div,
-              null,
-              _react2.default.createElement(_style2.default.rest_details.rating_stars, { style: { backgroundPosition: '0 -192px' } }),
-              _react2.default.createElement(
-                'span',
-                { style: { color: '#666' } },
-                ' 46 Reviews '
-              )
-            ),
-            _react2.default.createElement(
-              _style2.default.rest_details.category_div,
-              null,
-              _react2.default.createElement(
-                'span',
-                { style: { letterSpacing: '1px' } },
-                ' $$   \xB7 '
+                  { style: { color: '#666' } },
+                  ' 46 Reviews '
+                )
               ),
-              this.state.categories.map(function (value, index) {
-                return _react2.default.createElement(
-                  _style2.default.rest_details.category,
+              _react2.default.createElement(
+                _style2.default.rest_details.category_div,
+                null,
+                _react2.default.createElement(
+                  'span',
+                  { style: { letterSpacing: '1px' } },
+                  ' $$   \xB7 '
+                ),
+                this.state.categories.map(function (value, index) {
+                  return _react2.default.createElement(
+                    _style2.default.rest_details.category,
+                    { href: '/', key: index },
+                    ' ',
+                    value,
+                    ' '
+                  );
+                })
+              )
+            ),
+            _react2.default.createElement(
+              _style2.default.rest_details.right_h,
+              null,
+              _react2.default.createElement(
+                _style2.default.rest_details.divForReviewButton,
+                null,
+                _react2.default.createElement(
+                  _style2.default.rest_details.review_button,
                   { href: '/' },
-                  ' ',
-                  value,
-                  ', '
-                );
-              })
+                  _react2.default.createElement('i', { className: 'fas fa-star' }),
+                  ' Write a review'
+                )
+              ),
+              _react2.default.createElement(
+                _style2.default.rest_details.spanTagForAction,
+                null,
+                this.state.actions.map(function (value, index) {
+                  return _react2.default.createElement(
+                    _style2.default.rest_details.action_button,
+                    { key: index, href: '/' },
+                    _react2.default.createElement('i', { className: action_icons[index] }),
+                    ' ',
+                    value
+                  );
+                })
+              )
             )
           )
         )
@@ -1131,13 +1163,19 @@ var _templateObject = _taggedTemplateLiteral(['\n  vertical-align: baseline;\n']
     _templateObject17 = _taggedTemplateLiteral(['\n    // box-sizing: border-box;\n    display: table-cell;\n    // vertical-align: top;\n    text-align: center;\n  '], ['\n    // box-sizing: border-box;\n    display: table-cell;\n    // vertical-align: top;\n    text-align: center;\n  ']),
     _templateObject18 = _taggedTemplateLiteral(['\n    color: #fff;\n    // display: inline;\n    padding: 0 12px 0;\n    font-size: 15px;\n    font-weight: bold;\n    line-height: 21px;\n  '], ['\n    color: #fff;\n    // display: inline;\n    padding: 0 12px 0;\n    font-size: 15px;\n    font-weight: bold;\n    line-height: 21px;\n  ']),
     _templateObject19 = _taggedTemplateLiteral(['\n  margin: 0;\n  padding: 0;\n  bordeR: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  display: block;\n'], ['\n  margin: 0;\n  padding: 0;\n  bordeR: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  display: block;\n']),
-    _templateObject20 = _taggedTemplateLiteral(['\n    height: 443px;\n    width: 960px;\n    padding: 10px;\n    margin: 0 296px 0;\n    z-index: 1;\n  '], ['\n    height: 443px;\n    width: 960px;\n    padding: 10px;\n    margin: 0 296px 0;\n    z-index: 1;\n  ']),
-    _templateObject21 = _taggedTemplateLiteral(['\n    width: 525px;\n    height: 112px;\n    padding-right: 30px;\n    display: inline;\n  '], ['\n    width: 525px;\n    height: 112px;\n    padding-right: 30px;\n    display: inline;\n  ']),
-    _templateObject22 = _taggedTemplateLiteral(['\n    margin-top: 6px !important;\n    width: 525px;\n    height: 42px;\n  '], ['\n    margin-top: 6px !important;\n    width: 525px;\n    height: 42px;\n  ']),
-    _templateObject23 = _taggedTemplateLiteral(['\n    margin-top: 15px !important;\n    width: 525px;\n    height: 24px;\n  '], ['\n    margin-top: 15px !important;\n    width: 525px;\n    height: 24px;\n  ']),
-    _templateObject24 = _taggedTemplateLiteral(['\n    background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png);\n    background-size: 132px 560px;\n    display: inline-block;\n    vertical-align-middle;\n    width: 132px;\n    height: 24px;\n    float: left;\n    margin: -4px 6px 0 0;\n  '], ['\n    background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png);\n    background-size: 132px 560px;\n    display: inline-block;\n    vertical-align-middle;\n    width: 132px;\n    height: 24px;\n    float: left;\n    margin: -4px 6px 0 0;\n  ']),
-    _templateObject25 = _taggedTemplateLiteral(['\n    display: inline-block;\n    vertical-align-middle;\n    margin-top: 10px !important;\n    width: 360px;\n    height: 22px;\n  '], ['\n    display: inline-block;\n    vertical-align-middle;\n    margin-top: 10px !important;\n    width: 360px;\n    height: 22px;\n  ']),
-    _templateObject26 = _taggedTemplateLiteral(['\n    color: #0073bb;\n    text-decoration: none;\n  '], ['\n    color: #0073bb;\n    text-decoration: none;\n  ']);
+    _templateObject20 = _taggedTemplateLiteral(['\n    height: 443px;\n    width: 960px;\n    padding: 3px;\n    margin: 0 296px 0;\n    z-index: 1;\n  '], ['\n    height: 443px;\n    width: 960px;\n    padding: 3px;\n    margin: 0 296px 0;\n    z-index: 1;\n  ']),
+    _templateObject21 = _taggedTemplateLiteral(['\n    width: 960px;\n    height: 112px;\n    position: relative;\n    display: flex;\n    align-items: center;\n    width: 100%;\n    margin-bottom: 13px;\n  '], ['\n    width: 960px;\n    height: 112px;\n    position: relative;\n    display: flex;\n    align-items: center;\n    width: 100%;\n    margin-bottom: 13px;\n  ']),
+    _templateObject22 = _taggedTemplateLiteral(['\n    width: 545px;\n    height: 112px;\n    padding-right: 30px;\n    display: inline;\n  '], ['\n    width: 545px;\n    height: 112px;\n    padding-right: 30px;\n    display: inline;\n  ']),
+    _templateObject23 = _taggedTemplateLiteral(['\n    margin-top: 6px !important;\n    width: 525px;\n    height: 42px;\n  '], ['\n    margin-top: 6px !important;\n    width: 525px;\n    height: 42px;\n  ']),
+    _templateObject24 = _taggedTemplateLiteral(['\n    margin-top: 15px !important;\n    width: 525px;\n    height: 24px;\n  '], ['\n    margin-top: 15px !important;\n    width: 525px;\n    height: 24px;\n  ']),
+    _templateObject25 = _taggedTemplateLiteral(['\n    background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png);\n    background-size: 132px 560px;\n    display: inline-block;\n    vertical-align-middle;\n    width: 132px;\n    height: 24px;\n    float: left;\n    margin: -4px 6px 0 0;\n  '], ['\n    background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png);\n    background-size: 132px 560px;\n    display: inline-block;\n    vertical-align-middle;\n    width: 132px;\n    height: 24px;\n    float: left;\n    margin: -4px 6px 0 0;\n  ']),
+    _templateObject26 = _taggedTemplateLiteral(['\n    display: inline-block;\n    vertical-align-middle;\n    margin-top: 10px !important;\n    width: 360px;\n    height: 22px;\n  '], ['\n    display: inline-block;\n    vertical-align-middle;\n    margin-top: 10px !important;\n    width: 360px;\n    height: 22px;\n  ']),
+    _templateObject27 = _taggedTemplateLiteral(['\n    color: #0073bb;\n    text-decoration: none;\n    font-size: 19px;\n  '], ['\n    color: #0073bb;\n    text-decoration: none;\n    font-size: 19px;\n  ']),
+    _templateObject28 = _taggedTemplateLiteral(['\n    width: 405px;\n    height: 36px;\n    display: inline;\n    position: relative !important;\n  '], ['\n    width: 405px;\n    height: 36px;\n    display: inline;\n    position: relative !important;\n  ']),
+    _templateObject29 = _taggedTemplateLiteral(['\n    display: inline-block;\n    vertical-align: middle;\n    height: 36px;\n    width: 158px;\n    border-color: #8d0005;\n    border-radius: 4px;\n    box-shadow: 0 1px 1px rgba(0,0,0,0.3);\n    background: linear-gradient(#d90007, #c91400);\n    margin-right: 12px;\n    text-align: center;\n  '], ['\n    display: inline-block;\n    vertical-align: middle;\n    height: 36px;\n    width: 158px;\n    border-color: #8d0005;\n    border-radius: 4px;\n    box-shadow: 0 1px 1px rgba(0,0,0,0.3);\n    background: linear-gradient(#d90007, #c91400);\n    margin-right: 12px;\n    text-align: center;\n  ']),
+    _templateObject30 = _taggedTemplateLiteral(['\n    color: white;\n    text-decoration: none;\n    font-weight: bold;\n    font-size: 18px;\n    line-height: 35px;\n    &:hover{\n      background: rgba(51,51,51,0.3);\n    }\n  '], ['\n    color: white;\n    text-decoration: none;\n    font-weight: bold;\n    font-size: 18px;\n    line-height: 35px;\n    &:hover{\n      background: rgba(51,51,51,0.3);\n    }\n  ']),
+    _templateObject31 = _taggedTemplateLiteral(['\n    width: 224px;\n    height: 30px;\n    vertical-align: baseline;\n    float: right;\n    margin-top: 4px;\n  '], ['\n    width: 224px;\n    height: 30px;\n    vertical-align: baseline;\n    float: right;\n    margin-top: 4px;\n  ']),
+    _templateObject32 = _taggedTemplateLiteral(['\n    padding: 5px 8px;\n    height: 17px;\n    width: 62px;\n    vertical-align: middle;\n    background: linear-gradient(#fff, #f7f7f7);\n    background-color: #f7f7f7;\n    border: 1px solid;\n    border-color: #ccc;\n    box-shadow: 0 1px 1px rgba(0,0,0,0.1);\n    color: #666;\n    text-align: center;\n    font-size: 14px;\n    font-weight: bold;\n    text-decoration: none;\n    line-height: 27px;\n  '], ['\n    padding: 5px 8px;\n    height: 17px;\n    width: 62px;\n    vertical-align: middle;\n    background: linear-gradient(#fff, #f7f7f7);\n    background-color: #f7f7f7;\n    border: 1px solid;\n    border-color: #ccc;\n    box-shadow: 0 1px 1px rgba(0,0,0,0.1);\n    color: #666;\n    text-align: center;\n    font-size: 14px;\n    font-weight: bold;\n    text-decoration: none;\n    line-height: 27px;\n  ']);
 
 var _react = __webpack_require__(3);
 
@@ -1198,14 +1236,19 @@ var header = {
 var default_div = _styledComponents2.default.div(_templateObject19);
 var rest_details = {
   h: default_div.extend(_templateObject20),
-  left_h: default_div.extend(_templateObject21),
-  title_claim_div: default_div.extend(_templateObject22),
-  ratings_div: default_div.extend(_templateObject23),
+  rest_header: default_div.extend(_templateObject21),
 
-  rating_stars: default_div.extend(_templateObject24),
-
-  category_div: default_div.extend(_templateObject25),
-  category: _styledComponents2.default.a(_templateObject26)
+  left_h: default_div.extend(_templateObject22),
+  title_claim_div: default_div.extend(_templateObject23),
+  ratings_div: default_div.extend(_templateObject24),
+  rating_stars: default_div.extend(_templateObject25),
+  category_div: default_div.extend(_templateObject26),
+  category: _styledComponents2.default.a(_templateObject27),
+  right_h: default_div.extend(_templateObject28),
+  divForReviewButton: default_div.extend(_templateObject29),
+  review_button: _styledComponents2.default.a(_templateObject30),
+  spanTagForAction: _styledComponents2.default.span(_templateObject31),
+  action_button: _styledComponents2.default.a(_templateObject32)
 };
 module.exports = {
   header: header, rest_details: rest_details, header_spacing: header_spacing

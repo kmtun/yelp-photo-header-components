@@ -172,12 +172,22 @@ const rest_details = {
   h: default_div.extend`
     height: 443px;
     width: 960px;
-    padding: 10px;
+    padding: 3px;
     margin: 0 296px 0;
     z-index: 1;
   `,
+  rest_header: default_div.extend`
+    width: 960px;
+    height: 112px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 13px;
+  `,
+
   left_h: default_div.extend`
-    width: 525px;
+    width: 545px;
     height: 112px;
     padding-right: 30px;
     display: inline;
@@ -192,7 +202,6 @@ const rest_details = {
     width: 525px;
     height: 24px;
   `,
-
   rating_stars: default_div.extend`
     background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png);
     background-size: 132px 560px;
@@ -203,7 +212,6 @@ const rest_details = {
     float: left;
     margin: -4px 6px 0 0;
   `,
-
   category_div: default_div.extend`
     display: inline-block;
     vertical-align-middle;
@@ -214,7 +222,60 @@ const rest_details = {
   category: styled.a`
     color: #0073bb;
     text-decoration: none;
+    font-size: 19px;
   `,
+  right_h: default_div.extend`
+    width: 405px;
+    height: 36px;
+    display: inline;
+    position: relative !important;
+  `,
+  divForReviewButton: default_div.extend`
+    display: inline-block;
+    vertical-align: middle;
+    height: 36px;
+    width: 158px;
+    border-color: #8d0005;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    background: linear-gradient(#d90007, #c91400);
+    margin-right: 12px;
+    text-align: center;
+  `,
+  review_button: styled.a`
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 35px;
+    &:hover{
+      background: rgba(51,51,51,0.3);
+    }
+  `,
+  spanTagForAction: styled.span`
+    width: 224px;
+    height: 30px;
+    vertical-align: baseline;
+    float: right;
+    margin-top: 4px;
+  `,
+  action_button: styled.a`
+    padding: 5px 8px;
+    height: 17px;
+    width: 62px;
+    vertical-align: middle;
+    background: linear-gradient(#fff, #f7f7f7);
+    background-color: #f7f7f7;
+    border: 1px solid;
+    border-color: #ccc;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    color: #666;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 27px;
+  `
 }
 module.exports = {
   header, rest_details, header_spacing
