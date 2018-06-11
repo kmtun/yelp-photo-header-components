@@ -14,18 +14,26 @@ const header_padding = headerDiv.extend`
 
 //create spacing between logo and seach bar
 const header_spacing = header_padding.extend`
-  margin-left: 9px;
-  margin-right: 9px;
-  vertical-algin: middle;
-  display: table-cell;
+margin-left: 9px;
+margin-right: 9px;
+vertical-algin: middle;
+display: table-cell;
 `;
 
 const signup_login = styled.a`
-  border: none;
-  text-decoration: none;
-  &:hover{
-    background: rgba(51,51,51,0.3);
-  }
+border: none;
+text-decoration: none;
+&:hover{
+  background: rgba(51,51,51,0.3);
+}
+`;
+const default_div = styled.div`
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  display: block;
 `;
 
 const header = {
@@ -53,14 +61,13 @@ const header = {
     height: 40px; 
     display: table-cell;
   `,
-
   search: styled.input`
     display: table-cell;
     width: 285px;
     height: 36px;
     padding: 0 30px;
     line-height: 20px;
-    bordeR: none;
+    border: none;
     border-radius: 4px;
     vertical-align: middle;
   `,
@@ -160,20 +167,12 @@ const header = {
   `,
 }
 
-const default_div = styled.div`
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  display: block;
-`;
 const rest_details = {
   h: default_div.extend`
     height: 443px;
     width: 960px;
     padding: 3px;
-    margin: 0 296px 0;
+    margin: 0 233px 0;
     z-index: 1;
   `,
   rest_header: default_div.extend`
